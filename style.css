@@ -1,0 +1,227 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color:#333;
+  padding: 20px;
+  background-image: url("https://i.pinimg.com/736x/ac/7b/3b/ac7b3befbeaf552a1d820de5202042dd.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  } 
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color:#f9f7f7;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+.resume-header {
+  background-color: #d89da9;
+  padding: 20px;
+  text-align: center;
+}
+
+.resume-header h1 {
+  font-family: 'Lora', serif;
+  font-size: 36px;
+  color: #5b3923;
+}
+
+.resume-header p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #5b3923;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  padding: 20px;
+}
+
+.left-column {
+  width: 60%;
+  padding-right: 10px;
+}
+
+.right-column {
+  width: 40%;
+  padding-left: 10px;
+
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  color: #5b3923;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #5b3923;
+  padding-bottom: 5px;
+}
+
+.profile-picture {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e9dac1;
+}
+
+/* Contact Section */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+/* Skills Section */
+.skills {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+span{
+  font-size: 80px;
+  background-color: #D8A7B1;
+}
+.name-title:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.summary:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.section:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.right-column{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.skills{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+.section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #5b3923;
+  margin-top: 5px;
+  transition: width 0.3s ease;
+}
+
+.section h2:hover::after {
+  width: 100px;
+}
+/* Wave Background */
+.main-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(135deg, #81c784 25%, transparent 25%, transparent 50%, #81c784 50%, #81c784 75%, transparent 75%, transparent); */
+  background-size: 200% 200%;
+  animation: wave 6s ease-in-out infinite;
+   z-index: -1; /*Place the wave behind the resume container */
+}
+
+@keyframes wave {
+  0% {
+      background-position: 0% 0%;
+  }
+  100% {
+      background-position: 100% 100%;
+  }
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.theme-toggle input {
+  display: none;
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Dark Theme */
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: #f9f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s;
+}
+
+/* Dark Theme Styles */
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+/* Dark Theme Styles */
+body.dark {
+  background-color: #121212; /* Dark background color */
+  color: white; /* Light text color */
+}
+
+body.dark .container {
+  background-color: #1e1e1e; /* Darker background for the container */
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Light shadow */
+}
+
